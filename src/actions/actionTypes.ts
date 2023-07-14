@@ -1,0 +1,7 @@
+export const ADD_NOTE = 'ADD_NOTE'
+export const CHANGE_INPUT = 'CHANGE_INPUT'
+export const CHANGE_COLOR = 'CHANGE_COLOR'
+export const UPDATE_NOTES = 'UPDATE_NOTES'
+export const CHANGE_TITLE  = 'CHANGE_TITLE'
+export const ADD_PINEED = 'ADD_PINEED'
+export const UNPIN_NOTE = 'UNPIN_NOTE'
