@@ -75,7 +75,7 @@ const PinnedNoteList = ({ notes, updateNotes, pinnedList, unpinNote }) => {
                   <img
                     className="deleteIcon"
                     title="Delete Note"
-                    src="../dist/assets/delete-bin.png"
+                    src="../public/delete-bin.png"
                     alt="Delete Note"
                     onClick={() => handleDeleteNote(index)}
                   />
@@ -84,15 +84,15 @@ const PinnedNoteList = ({ notes, updateNotes, pinnedList, unpinNote }) => {
                     title={` ${note.isEditable ? "Save Note" : "Edit Note"}`}
                     src={` ${
                       note.isEditable
-                        ? "../dist/assets/save-icon1.png"
-                        : "../dist/assets/edit-icon.png"
+                        ? "../public/save-icon1.png"
+                        : "../public/edit-icon.png"
                     }`}
                     alt="Edit Note"
                     onClick={() => handleEditNote(index)}
                   />
                   <img
                     className="pinIcon"
-                    src="../dist/assets/unpin-icon.png"
+                    src="../public/unpin-icon.png"
                     alt="Pin Note"
                     title="unpin Note"
                     onClick={() => unpinNote(index)}

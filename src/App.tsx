@@ -109,7 +109,7 @@ const App = ({
                 <img
                   className="deleteIcon"
                   title="clear note"
-                  src="../dist/assets/clear-icon.png"
+                  src="../public/clear-icon.png"
                   alt="Clear Text"
                   onClick={() => changeInput("")}
                 />
