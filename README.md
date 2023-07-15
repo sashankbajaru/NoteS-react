@@ -7,4 +7,8 @@ Web application for sticky notes built using React and Redux Persist:
 
 Project depolyed on Netlify: https://master--super-marshmallow-d7f48c.netlify.app/ (Images are not loading, but rest is working fine)
 
+Below is a screenshot of the app on local browser:
+
+![App Screenshot](https://raw.githubusercontent.com/sashankbajaru/NoteS-react/master/NoteS-react.png)
+
 
