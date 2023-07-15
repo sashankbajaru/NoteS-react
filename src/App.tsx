@@ -26,8 +26,6 @@ const App = ({
 }) => {
   const handleAddNote = () => {
     if (inputValue.trim() !== "") {
-      console.log("Hey0 input.value: " + inputValue);
-
       addNote({
         title: title,
         content: inputValue,
@@ -50,13 +48,10 @@ const App = ({
     if (!notes[index].isEditable) {
       const updatedNotes = [...notes];
       updatedNotes[index] = { ...updatedNotes[index], isEditable: true };
-      console.log("Hey1" + updatedNotes);
       updateNotes(updatedNotes);
     } else {
-      console.log("Hey2 saving....");
       const updatedNotes = [...notes];
       updatedNotes[index] = { ...updatedNotes[index], isEditable: false };
-      console.log(updatedNotes);
       updateNotes(updatedNotes);
     }
   };
@@ -64,18 +59,14 @@ const App = ({
   const handleNoteChanges = (e, index) => {
     const updatedNotes = [...notes];
     updatedNotes[index] = { ...updatedNotes[index], content: e.target.value };
-    console.log("Hey4" + updatedNotes);
     updateNotes(updatedNotes);
   };
 
   const handleNoteTitleChanges = (e, index) => {
     const updatedNotes = [...notes];
     updatedNotes[index] = { ...updatedNotes[index], title: e.target.value };
-    console.log("Hey4" + updatedNotes);
     updateNotes(updatedNotes);
   };
-
-  console.log(notes);
 
   const colors = [
     "#D3D3D3",
@@ -118,7 +109,7 @@ const App = ({
                 <img
                   className="deleteIcon"
                   title="clear note"
-                  src="src/assets/clear-icon.png"
+                  src="./src/assets/clear-icon.png"
                   alt="Clear Text"
                   onClick={() => changeInput("")}
                 />

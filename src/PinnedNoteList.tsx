@@ -22,13 +22,10 @@ const PinnedNoteList = ({ notes, updateNotes, pinnedList, unpinNote }) => {
     if (!notes[index].isEditable) {
       const updatedNotes = [...notes];
       updatedNotes[index] = { ...updatedNotes[index], isEditable: true };
-      console.log("Hey1" + updatedNotes);
       updateNotes(updatedNotes);
     } else {
-      console.log("Hey2 saving....");
       const updatedNotes = [...notes];
       updatedNotes[index] = { ...updatedNotes[index], isEditable: false };
-      console.log(updatedNotes);
       updateNotes(updatedNotes);
     }
   };
@@ -36,18 +33,14 @@ const PinnedNoteList = ({ notes, updateNotes, pinnedList, unpinNote }) => {
   const handleNoteChanges = (e, index) => {
     const updatedNotes = [...notes];
     updatedNotes[index] = { ...updatedNotes[index], content: e.target.value };
-    console.log("Hey4" + updatedNotes);
     updateNotes(updatedNotes);
   };
 
   const handleNoteTitleChanges = (e, index) => {
     const updatedNotes = [...notes];
     updatedNotes[index] = { ...updatedNotes[index], title: e.target.value };
-    console.log("Hey4" + updatedNotes);
     updateNotes(updatedNotes);
   };
-
-  console.log("Hey pinnedLIst", pinnedList, notes);
 
   return (
     <ul>
@@ -82,7 +75,7 @@ const PinnedNoteList = ({ notes, updateNotes, pinnedList, unpinNote }) => {
                   <img
                     className="deleteIcon"
                     title="Delete Note"
-                    src="src/assets/delete-bin.png"
+                    src="./src/assets/delete-bin.png"
                     alt="Delete Note"
                     onClick={() => handleDeleteNote(index)}
                   />
@@ -91,15 +84,15 @@ const PinnedNoteList = ({ notes, updateNotes, pinnedList, unpinNote }) => {
                     title={` ${note.isEditable ? "Save Note" : "Edit Note"}`}
                     src={` ${
                       note.isEditable
-                        ? "src/assets/save-icon1.png"
-                        : "src/assets/edit-icon.png"
+                        ? "./src/assets/save-icon1.png"
+                        : "./src/assets/edit-icon.png"
                     }`}
                     alt="Edit Note"
                     onClick={() => handleEditNote(index)}
                   />
                   <img
                     className="pinIcon"
-                    src="src/assets/unpin-icon.png"
+                    src="./src/assets/unpin-icon.png"
                     alt="Pin Note"
                     title="unpin Note"
                     onClick={() => unpinNote(index)}
